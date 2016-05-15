@@ -51,7 +51,11 @@ The rest of the script should provide everything needed given the name of your d
 Double-click the `Docker Quickstart` icon to start a Git-Bash shell that will be preconfigured for use with the default docker machine. Ensure that the docker machine runs correctly by running `docker run hello-world`.
 
 ## Installing ROS on Docker
-In a shell configured for use with Docker, run `docker pull ros`. Further details are available on the [ROS website](http://wiki.ros.org/docker/Tutorials/Docker).
+In a shell configured for use with Docker, run `docker pull ros` and `docker pull osrf/ros:indigo-desktop-full`. Further details are available on the [ROS website](http://wiki.ros.org/docker/Tutorials/Docker). For development purposes the full desktop installation is preferable.
+
+## Installing Gazebo on Docker
+
+The Open Source Robotics Foundation also makes installing Gazebo using Docker possible. Gazebo will provide the environment for our robot to exist within. Gazebo can be installed in Docker by running `docker pull osrf/gazebo:gzserver5`.
 
 ## Running ROS in Docker
-Run the default ROS container by running `docker run -it ros`.
+Run the default ROS container by running `docker run -it osrf/ros:indigo-desktop-full`.
